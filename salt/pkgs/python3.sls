@@ -18,8 +18,7 @@ ensure that virtualenv is in system PATH:
     - contents: |
         export PATH=/usr/local/python3_env/bin:$PATH
     - require:
-      - pip: setup a system-wide virtual-env to install pip packages in
-
+      - setup a system-wide virtual-env to install pip packages in
 
 install useful python packages in virtualenv:
   pip.installed:

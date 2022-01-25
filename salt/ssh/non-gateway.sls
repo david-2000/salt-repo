@@ -13,5 +13,5 @@ open SSH only to our predefined gateway host:
 disable wide-open SSH in permanent config:
   firewalld.absent:
     - name: {{ pillar['firewalld_zone'] }}
-    - services:
-      - ssh
+	- prune_services
+    - services: None
