@@ -11,7 +11,7 @@ open SSH only to our predefined gateway host:
       - rule family="ipv4" source address="{{ pillar['ssh_gateway'] }}" service name="ssh" accept
 
 disable wide-open SSH in permanent config:
-  firewalld.absent:
+  firewalld.present:
     - name: {{ pillar['firewalld_zone'] }}
     - prune_services
     - services: None
